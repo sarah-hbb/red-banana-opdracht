@@ -1,0 +1,112 @@
+.best__seller {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-right: 0;
+}
+
+.products {
+  width: 100%;
+  display: flex;
+}
+
+.product__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  width: 300px;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px 0px #0000001a;
+
+  .product__pic {
+    width: 250px;
+  }
+
+  .product__review {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .review__stars {
+      padding-right: 10px;
+      border-right: #e0e0e0 1px solid;
+
+      svg path {
+        fill: $red-darker;
+      }
+    }
+    .in-stock {
+      color: $green;
+      font-family: Poppins;
+      font-size: 12px;
+      font-weight: 400;
+      padding-left: 10px;
+    }
+  }
+  .product__title {
+    @include bodyFontExtraBold();
+    line-height: 20px;
+  }
+
+  .button__fav {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 15px;
+    border: none;
+    border-radius: 100%;
+    background-color: #42bdab1a;
+  }
+
+  .card__lower {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .price {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      &__prv {
+        position: relative;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background: black;
+          transform: rotate(-10deg);
+        }
+      }
+
+      &__new {
+        @include bodyFontExtraBold();
+      }
+    }
+
+    .button__add--to--cart {
+      padding: 20px;
+      border-radius: 10px;
+      border: none;
+      background-color: $red-darker;
+      svg path {
+        fill: white;
+        font-size: 16px;
+        font-weight: 300;
+      }
+    }
+  }
+}

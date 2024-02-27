@@ -1,0 +1,64 @@
+.hero {
+  &__image {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../../Afbeeldingen/hero.png");
+    height: 40vh;
+    width: 100vw;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include md() {
+      height: 641px;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    padding: 0 6%;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+
+    @include md() {
+      width: 50%;
+      align-items: flex-start;
+      gap: 30px;
+    }
+
+    h1 {
+      font-family: Poppins;
+      font-size: 25px;
+      font-weight: 600;
+      line-height: 35px;
+      letter-spacing: 0px;
+      text-align: left;
+
+      @include md() {
+        font-size: 51px;
+        line-height: 57px;
+      }
+    }
+
+    p {
+      font-size: 12px;
+      @include md() {
+        @include bodyFont();
+      }
+    }
+
+    button {
+      @include CTAbutton();
+    }
+  }
+}

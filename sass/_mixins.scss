@@ -1,0 +1,64 @@
+// typography
+@mixin bodyFont() {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+@mixin bodyFontSemiBold() {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+@mixin bodyFontBold() {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+@mixin bodyFontExtraBold() {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+@mixin mainSectionsTitle() {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0px;
+  @include md() {
+    font-size: 28px;
+  }
+}
+
+// picture background
+@mixin productRangePics($url) {
+  background-image: linear-gradient(
+      rgba(52, 52, 52, 0.5),
+      rgba(61, 60, 60, 0.5)
+    ),
+    url($url);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin scaleUP() {
+  transform: scale(1.1);
+  transition: all ease-in-out 200ms;
+}
+
+// CTA button
+@mixin CTAbutton() {
+  background-color: $red;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 36px;
+  color: white;
+  &:hover {
+    background-color: black;
+    @include scaleUP();
+  }
+}

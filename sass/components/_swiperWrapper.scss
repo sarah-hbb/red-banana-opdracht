@@ -1,0 +1,67 @@
+.swiper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .swiper-wrapper {
+    width: 100%;
+  }
+
+  .wrapper {
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-right: $main-padding-small-device;
+
+    @include md() {
+      padding-right: $main-padding-medium-device;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    background-color: $bg-light-gray;
+    padding: 20px;
+    color: #231f20;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    position: relative;
+    margin-top: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: 10px;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 21px;
+  }
+
+  .swiper-scrollbar.swiper-scrollbar-horizontal {
+    margin-right: 5px;
+    position: relative;
+    width: 80%;
+  }
+
+  .swiper-scrollbar-drag {
+    background-color: $red;
+    height: 4px;
+  }
+
+  .swiper-scrollbar {
+    position: relative;
+  }
+
+  .swiper-slide {
+    max-width: 80%;
+  }
+}

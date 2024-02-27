@@ -1,0 +1,64 @@
+.product__range {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product__range__grid {
+  display: grid;
+  grid-template-areas:
+    "apple apple apple samsung samsung samsung"
+    "apple apple apple samsung samsung samsung"
+    "huawei huawei telefoonhoesjes telefoonhoesjes reparatie reparatie"
+    "huawei huawei telefoonhoesjes telefoonhoesjes overig overig";
+
+  gap: 5px;
+
+  div {
+    border-radius: 10px;
+    position: relative;
+    h3 {
+      @include mainSectionsTitle();
+      color: white;
+      position: absolute;
+      padding: 30px 10px;
+      bottom: 0;
+      text-wrap: wrap;
+
+      @include md() {
+        padding: 30px;
+      }
+    }
+  }
+}
+
+.item1 {
+  grid-area: apple;
+  height: 400px;
+  @include productRangePics("../../Afbeeldingen/apple-iphone-13.png");
+}
+.item2 {
+  grid-area: samsung;
+  height: 400px;
+  @include productRangePics("../../Afbeeldingen/samsung-galaxy-s22.png");
+}
+.item3 {
+  grid-area: huawei;
+  height: 400px;
+  @include productRangePics("../../Afbeeldingen/huawei-p30.png");
+}
+.item4 {
+  grid-area: telefoonhoesjes;
+  height: 400px;
+  @include productRangePics("../../Afbeeldingen/telefoonhoesjes.png");
+}
+.item5 {
+  grid-area: reparatie;
+  height: 100%;
+  @include productRangePics("../../Afbeeldingen/reparaties.png");
+}
+.item6 {
+  grid-area: overig;
+  height: 100%;
+  @include productRangePics("../../Afbeeldingen/overige-accessoires.png");
+}

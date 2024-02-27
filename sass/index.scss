@@ -1,0 +1,23 @@
+// variables and functions
+@import "variables";
+
+@import "mixins";
+@import "breakpoints";
+
+//config & layouts
+@import "config";
+// swiper modules
+@import "./components/swiperWrapper";
+@import "../node_modules/swiper/swiper";
+@import "../node_modules/swiper/modules/navigation";
+@import "../node_modules/swiper/modules/scrollbar.scss";
+
+// components (card, button, navabr,...)
+
+@import "./components/header";
+@import "./components/hero";
+@import "./components/productRange";
+@import "./components/product";
+@import "./components/callToAction";
+@import "./components/testimonials";
+@import "./components/footer";
